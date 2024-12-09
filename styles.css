@@ -1,53 +1,85 @@
-
+/* General Reset */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
 }
 
+/* Header Styles */
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
+    margin: 0;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
+    list-style: none;
+    margin: 10px 0 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Main Content */
 main {
     padding: 20px;
     max-width: 800px;
-    margin: auto;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer Styles */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
+    font-size: 0.9em;
     position: fixed;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* Table Styles */
@@ -55,6 +87,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background: #fff;
 }
 
 table, th, td {
@@ -62,31 +95,82 @@ table, th, td {
 }
 
 th, td {
-    padding: 8px;
+    padding: 12px;
     text-align: left;
 }
 
+th {
+    background-color: #f4f4f9;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Form Styles */
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     margin-top: 20px;
 }
 
+form input, form textarea, form button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #333;
+}
+
+/* Article Styles */
 article {
     margin-bottom: 20px;
 }
 
 article h3 {
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: #333;
+    margin-bottom: 10px;
 }
 
+article p {
+    margin-bottom: 10px;
+}
+
+/* List Styles */
 ul {
     list-style-type: square;
-    margin-top: 10px;
+    margin: 15px 0;
+    padding-left: 20px;
 }
 
 ul li {
     margin-bottom: 8px;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .logo {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+
+    main
