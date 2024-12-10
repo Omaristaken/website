@@ -65,10 +65,9 @@ footer {
     width: 100%;
 }
 
-
 footer {
     background-color: var(--primary-color); /* #005f7f */
-    color: #ffffff; /* White text */
+    color: #f0f0f0; /* Lighter text color */
     text-align: center;
     padding: 10px 0;
     position: fixed;
@@ -77,9 +76,7 @@ footer {
 }
 
 footer a {
-    color: #ffffff; /* You can make it more distinguishable, like using a lighter color */
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: #f0f0f0; /* Lighter text color for links */
 }
 
 footer a:hover {
