@@ -1,0 +1,17 @@
+[
+    {
+        "project_name": "Poker Game",
+        "description": "Coded a playable poker game with Python.",
+        "date": "2022"
+    },
+    {
+        "project_name": "Tic-Tac-Toe",
+        "description": "Coded a Tic-Tac-Toe game against a bot that never loses with backtracking.",
+        "date": "2023"
+    },
+    {
+        "project_name": "Weather API",
+        "description": "Built a web-based weather dashboard that pulls live data from an API to show real-time weather updates.",
+        "date": "2023"
+    }
+]

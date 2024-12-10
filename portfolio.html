@@ -21,29 +21,39 @@
     </header>
 
     <main>
-        <h2>Portfolio</h2>
-        <table>
-            <tr>
-                <th>Project</th>
-                <th>Description</th>
-                <th>Date</th>
-            </tr>
-            <tr>
-                <td>Poker Game</td>
-                <td>Coded a playable poker game with python.</td>
-                <td>2022</td>
-            </tr>
-            <tr>
-                <td>Tic-Tac-Toe</td>
-                <td>Coded a Tic-Tac-Toe game against a bot that never loses with backtracking</td>
-                <td>2023</td>
-            </tr>
-            <tr>
-                <td>Weather API</td>
-                <td>Built a web-based weather dashboard that pulls live data from an API to show real-time weather updates</td>
-                <td>2023</td>
-            </tr>
-        </table>
+        <body>
+            <h1>My Projects</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="project-table">
+                </tbody>
+            </table>
+        
+            <!-- JavaScript code goes here -->
+            <script>
+                fetch('data.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const tableBody = document.getElementById('project-table');
+                        data.forEach(project => {
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+                                <td>${project.project_name}</td>
+                                <td>${project.description}</td>
+                                <td>${project.date}</td>
+                            `;
+                            tableBody.appendChild(row);
+                        });
+                    })
+                    .catch(err => console.error('Error fetching project data:', err));
+            </script>
+        </body>
     </main>
 
     <footer>
@@ -51,3 +61,4 @@
     </footer>
 </body>
 </html>
+
